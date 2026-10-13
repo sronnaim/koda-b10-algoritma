@@ -26,13 +26,13 @@ Menukar isi dari gelas teh dengan isi dari gelas kopi.
 
 ```mermaid
 flowchart TD
-    Start@{ shape: circle, label: mulai }
+    Start@{ shape: terminal, label: mulai }
     Input@{ shape: lean-r, label: angka }
-    A@{ shape: rect,  label: mod = angka % 2 }
-    Control@{ shape: diamond, label: mod = 0? }
-    OutputOdd@{ shape: lean-l, label: #quot;ganjil#quot; }
-    OutputEven@{ shape: lean-l, label: #quot;genap#quot; }
-    End@{ shape: dbl-circ, label: selesai }
+    A@{ shape: rect,  label: "mod = angka % 2" }
+    Control@{ shape: diamond, "label: mod = 0?" }
+    OutputOdd@{ shape: lean-l, label: "#quot;ganjil#quot;" }
+    OutputEven@{ shape: lean-l, label: "#quot;genap#quot;" }
+    End@{ shape: terminal, label: selesai }
 
     Start --> Input --> A --> Control
     Control --ya--> OutputEven --> End
