@@ -29,7 +29,7 @@ flowchart TD
     Start@{ shape: terminal, label: mulai }
     Input@{ shape: lean-r, label: angka }
     A@{ shape: rect,  label: "mod = angka % 2" }
-    Control@{ shape: diamond, "label: mod = 0?" }
+    Control@{ shape: diamond, label: "mod = 0?" }
     OutputOdd@{ shape: lean-l, label: "#quot;ganjil#quot;" }
     OutputEven@{ shape: lean-l, label: "#quot;genap#quot;" }
     End@{ shape: terminal, label: selesai }
