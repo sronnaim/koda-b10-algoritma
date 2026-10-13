@@ -1,16 +1,22 @@
 // Algoritma menentukan bilangan ganjil atau genap
-DECLARE num : INTEGER
-INPUT num
-IF num MOD 2 = 0 THEN
-    OUTPUT "even"
+DECLARE angka : INTEGER
+INPUT angka
+IF angka MOD 2 = 0 THEN
+    OUTPUT "genap"
 ELSE
-    OUTPUT "odd"
+    OUTPUT "ganjil"
 ENDIF
 
 // Algoritma hitung luas dan keliling lingkaran
-DECLARE r : REAL
+DECLARE jariJari : REAL
+DECLARE luasLingkaran : REAL
+DECLARE kelilingLingkaran : REAL
 CONSTANT pi = 3.14
 
-INPUT r
-OUTPUT "Area = ", pi * r * r
-OUTPUT "Circumference = ", pi * 2 * r
+INPUT jariJari
+
+luasLingkaran <- pi * jariJari * jariJari
+OUTPUT luasLingkaran
+
+kelilingLingkaran <- pi * 2 * jariJari
+OUTPUT kelilingLingkaran

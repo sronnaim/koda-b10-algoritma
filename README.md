@@ -67,21 +67,29 @@ ENDIF
 ```mermaid
 flowchart TD
     Start@{ shape: start, label: "mulai" }
-    End@{ shape: stop, label: "selesai"}
     Input@{ shape: lean-r, label: "jari-jari"}
-    OutputCircum@{ shape: lean-l, label: "3,14 x jari-jari<sup>2</sup>" }
-    OutputArea@{ shape: lean-l, label: "3,14 x 2 x jari-jari "}
+    A@{ shape: rect, label: "luas lingkaran = 3,14 x jari-jari<sup>2</sup>" }
+    B@{ shape: rect, label: "keliling lingkaran = 3,14 x 2 x jari-jari" }
+    OutputArea@{ shape: lean-r, label: "luas lingkaran"}
+    OutputCircum@{ shape: lean-r, label: "keliling lingkaran" }
+    End@{ shape: stop, label: "selesai"}
 
-    Start --> Input --> OutputArea --> OutputCircum --> End
+    Start --> Input --> A --> OutputArea --> B --> OutputCircum --> End
 ```
 
 ### Pseudo
 
 ```pseudo
-DECLARE jari-jari : REAL
+DECLARE jariJari : REAL
+DECLARE luasLingkaran : REAL
+DECLARE kelilingLingkaran : REAL
 CONSTANT pi = 3.14
 
-INPUT jari-jari
-OUTPUT "Area = ", pi * r * r
-OUTPUT "Circumference = ", pi * 2 * r
+INPUT jariJari
+
+luasLingkaran <- pi * jariJari * jariJari
+OUTPUT luasLingkaran
+
+kelilingLingkaran <- pi * 2 * jariJari
+OUTPUT kelilingLingkaran
 ```
