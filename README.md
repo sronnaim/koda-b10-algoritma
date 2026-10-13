@@ -17,7 +17,7 @@ Menukar isi dari gelas teh dengan isi dari gelas kopi.
 
 1. Mulai
 2. Masukkan sebuah angka
-3. Lakukan pembagian antara angka tersebut dengan bilangan 2
+3. Hitung hasil dari pembagian (modulus) angka tersebut dengan bilangan 2
 4. Jika hasil dari pembagian tersebut bukan 0, tampilkan angka tersebut sebagai ganjil
 5. Jika tidak, tampilkan angka tersebut sebagai genap
 6. Selesai
@@ -28,13 +28,12 @@ Menukar isi dari gelas teh dengan isi dari gelas kopi.
 flowchart TD
     Start@{ shape: terminal, label: mulai }
     Input@{ shape: lean-r, label: angka }
-    A@{ shape: rect,  label: "mod = angka % 2" }
-    Control@{ shape: diamond, label: "mod = 0?" }
+    Control@{ shape: diamond, label: "angka % 2 == 0?" }
     OutputOdd@{ shape: lean-l, label: "#quot;ganjil#quot;" }
     OutputEven@{ shape: lean-l, label: "#quot;genap#quot;" }
     End@{ shape: terminal, label: selesai }
 
-    Start --> Input --> A --> Control
+    Start --> Input --> Control
     Control --ya--> OutputEven --> End
     Control --tidak--> OutputOdd --> End
 ```
