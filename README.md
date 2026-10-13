@@ -13,12 +13,31 @@ Menukar isi dari gelas teh dengan isi dari gelas kopi.
 
 ## Algoritma menentukan bilangan ganjil atau genap
 
+### Deskriptif
+
 1. Mulai
 2. Masukkan sebuah angka
 3. Lakukan pembagian antara angka tersebut dengan bilangan 2
 4. Jika hasil dari pembagian tersebut bukan 0, tampilkan angka tersebut sebagai ganjil
 5. Jika tidak, tampilkan angka tersebut sebagai genap
 6. Selesai
+
+### Flowchart
+
+```mermaid
+flowchart TD
+Start@{ shape: circle, label: mulai }
+Input@{ shape: lean-r, label: angka }
+A@{ shape: rect,  label: mod = angka % 2 }
+Control@{ shape: diamond, label: mod = 0? }
+OutputOdd@{ shape: lean-l, label: #quot;ganjil#quot; }
+OutputEven@{ shape: lean-l, label: #quot;genap#quot; }
+End@{ shape: dbl-circ, label: selesai }
+
+Start --> Input --> A --> Control
+Control --ya--> OutputEven --> End
+Control --tidak--> OutputOdd --> End
+```
 
 ## Algoritma hitung luas dan keliling lingkaran
 
@@ -30,3 +49,4 @@ Menukar isi dari gelas teh dengan isi dari gelas kopi.
 6. **Untuk keliling lingkaran**, lakukan perkalian dari hasil perkalian *pi* pertama dengan bilangan **2**
 7. Tampilkan hasil perkalian terakhir sebagai **keliling lingkaran**
 8. Selesai
+
