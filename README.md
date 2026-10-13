@@ -26,17 +26,17 @@ Menukar isi dari gelas teh dengan isi dari gelas kopi.
 
 ```mermaid
 flowchart TD
-Start@{ shape: circle, label: mulai }
-Input@{ shape: lean-r, label: angka }
-A@{ shape: rect,  label: mod = angka % 2 }
-Control@{ shape: diamond, label: mod = 0? }
-OutputOdd@{ shape: lean-l, label: #quot;ganjil#quot; }
-OutputEven@{ shape: lean-l, label: #quot;genap#quot; }
-End@{ shape: dbl-circ, label: selesai }
+    Start@{ shape: circle, label: mulai }
+    Input@{ shape: lean-r, label: angka }
+    A@{ shape: rect,  label: mod = angka % 2 }
+    Control@{ shape: diamond, label: mod = 0? }
+    OutputOdd@{ shape: lean-l, label: #quot;ganjil#quot; }
+    OutputEven@{ shape: lean-l, label: #quot;genap#quot; }
+    End@{ shape: dbl-circ, label: selesai }
 
-Start --> Input --> A --> Control
-Control --ya--> OutputEven --> End
-Control --tidak--> OutputOdd --> End
+    Start --> Input --> A --> Control
+    Control --ya--> OutputEven --> End
+    Control --tidak--> OutputOdd --> End
 ```
 
 ## Algoritma hitung luas dan keliling lingkaran
@@ -49,4 +49,3 @@ Control --tidak--> OutputOdd --> End
 6. **Untuk keliling lingkaran**, lakukan perkalian dari hasil perkalian *pi* pertama dengan bilangan **2**
 7. Tampilkan hasil perkalian terakhir sebagai **keliling lingkaran**
 8. Selesai
-
