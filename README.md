@@ -41,12 +41,12 @@ flowchart TD
 ### Pseudo
 
 ```pseudo
-DECLARE num : INTEGER
-INPUT num
-IF num MOD 2 = 0 THEN
-    OUTPUT "even"
+DECLARE angka : INTEGER
+INPUT angka
+IF angka MOD 2 = 0 THEN
+    OUTPUT "genap"
 ELSE
-    OUTPUT "odd"
+    OUTPUT "ganjil"
 ENDIF
 ```
 
@@ -78,10 +78,10 @@ flowchart TD
 ### Pseudo
 
 ```pseudo
-DECLARE r : REAL
+DECLARE jari-jari : REAL
 CONSTANT pi = 3.14
 
-INPUT r
+INPUT jari-jari
 OUTPUT "Area = ", pi * r * r
 OUTPUT "Circumference = ", pi * 2 * r
 ```
