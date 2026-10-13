@@ -57,10 +57,8 @@ flowchart TD
     Start@{ shape: circle, label: "mulai" }
     End@{ shape: dbl-circ, label: "selesai"}
     Input@{ shape: lean-r, label: "jari-jari"}
-    OutputCircum@{ shape: lean-r, label: "3,14 x jari-jari<sup>2</sup>" }
+    OutputCircum@{ shape: lean-l, label: "3,14 x jari-jari<sup>2</sup>" }
     OutputArea@{ shape: lean-l, label: "3,14 x 2 x jari-jari "}
 
-    Start --> Input
-    Input --> OutputArea --> End
-    Input --> OutputCircum --> End
+    Start --> Input --> OutputArea --> OutputCircum --> End
 ```
