@@ -1,0 +1,16 @@
+// Algoritma menentukan bilangan ganjil atau genap
+DECLARE num : INTEGER
+INPUT num
+IF num MOD 2 = 0 THEN
+    OUTPUT "even"
+ELSE
+    OUTPUT "odd"
+ENDIF
+
+// Algoritma hitung luas dan keliling lingkaran
+DECLARE r : REAL
+CONSTANT pi = 3.14
+
+INPUT r
+OUTPUT pi * r * r
+OUTPUT pi * 2 * r

@@ -38,6 +38,18 @@ flowchart TD
     Control --tidak--> OutputOdd --> End
 ```
 
+### Pseudo
+
+```pseudo
+DECLARE num : INTEGER
+INPUT num
+IF num MOD 2 = 0 THEN
+    OUTPUT "even"
+ELSE
+    OUTPUT "odd"
+ENDIF
+```
+
 ## Algoritma hitung luas dan keliling lingkaran
 
 ### Deskriptif
@@ -61,4 +73,15 @@ flowchart TD
     OutputArea@{ shape: lean-l, label: "3,14 x 2 x jari-jari "}
 
     Start --> Input --> OutputArea --> OutputCircum --> End
+```
+
+### Pseudo
+
+```pseudo
+DECLARE r : REAL
+CONSTANT pi = 3.14
+
+INPUT r
+OUTPUT pi * r * r
+OUTPUT pi * 2 * r
 ```
