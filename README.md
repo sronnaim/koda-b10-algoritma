@@ -1,5 +1,6 @@
 # Algoritma
 
+## Algoritma memindahkan air
 Menukar isi dari gelas yang dinamakan 'teh' dengan isi dari gelas 'kopi'.
 
 1. Mulai
@@ -7,4 +8,13 @@ Menukar isi dari gelas yang dinamakan 'teh' dengan isi dari gelas 'kopi'.
 3. Tuangkan isi gelas 'teh' ke dalam gelas 'bantu'
 4. Tuangkan isi gelas 'kopi' ke dalam gelas 'teh'
 5. Tuangkan isi gelas 'bantu' ke dalam gelas 'kopi'
+6. Selesai
+
+## Algoritma menentukan bilangan ganjil atau genap
+
+1. Mulai
+2. Sediakan satu kertas, labelkan kertas tersebut sebagai 'sisa'
+3. Lakukan pembagian antara bilangan input dengan bilangan bulat 2, tulis sisa pembagian ke dalam kertas 'sisa'
+4. Jika 'sisa' tertulis bukan bilangan 0, tetapkan bilangan input tersebut sebagai ganjil
+5. Jika tidak, tetapkan bilangan input sebagai genap
 6. Selesai
