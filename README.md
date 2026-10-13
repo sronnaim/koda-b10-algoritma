@@ -82,6 +82,6 @@ DECLARE r : REAL
 CONSTANT pi = 3.14
 
 INPUT r
-OUTPUT pi * r * r
-OUTPUT pi * 2 * r
+OUTPUT "Area = ", pi * r * r
+OUTPUT "Circumference = ", pi * 2 * r
 ```
