@@ -26,12 +26,12 @@ Menukar isi dari gelas teh dengan isi dari gelas kopi.
 
 ```mermaid
 flowchart TD
-    Start@{ shape: terminal, label: mulai }
+    Start@{ shape: circle, label: mulai }
     Input@{ shape: lean-r, label: angka }
     Control@{ shape: diamond, label: "angka % 2 == 0?" }
     OutputOdd@{ shape: lean-l, label: "#quot;ganjil#quot;" }
     OutputEven@{ shape: lean-l, label: "#quot;genap#quot;" }
-    End@{ shape: terminal, label: selesai }
+    End@{ shape: dbl-circ, label: selesai }
 
     Start --> Input --> Control
     Control --ya--> OutputEven --> End
@@ -40,11 +40,27 @@ flowchart TD
 
 ## Algoritma hitung luas dan keliling lingkaran
 
+### Deskriptif
+
 1. Mulai
-2. Masukkan sebuah angka jari-jari lingkaran
-3. Lakukan perkalian nilai *pi* sebesar 3,14 dengan **jari-jari** lingkaran tersebut
-4. **Untuk luas lingkaran**, lakukan perkalian dari hasil perkalian *pi* pertama dengan dengan **jari-jari** lagi
-5. Tampilkan hasil perkalian terakhir sebagai **luas lingkaran**
-6. **Untuk keliling lingkaran**, lakukan perkalian dari hasil perkalian *pi* pertama dengan bilangan **2**
-7. Tampilkan hasil perkalian terakhir sebagai **keliling lingkaran**
-8. Selesai
+2. Masukkan sebuah angka sebagai jari-jari
+3. **Untuk luas lingkaran**, lakukan perkalian *pi* (3,14) dengan **jari-jari** kuadrat
+4. Tampilkan hasil perkalian sebagai **luas lingkaran**
+5. **Untuk keliling lingkaran**, lakukan perkalian *pi* (3,14) dengan bilangan **2** dan **jari-jari**
+6. Tampilkan hasil perkalian terakhir sebagai **keliling lingkaran**
+7. Selesai
+
+### Flowchart
+
+```mermaid
+flowchart TD
+    Start@{ shape: circle, label: "mulai" }
+    End@{ shape: dbl-circ, label: "selesai"}
+    Input@{ shape: lean-r, label: "jari-jari"}
+    OutputCircum@{ shape: lean-r, label: "3,14 x jari-jari<sup>2</sup>" }
+    OutputArea@{ shape: lean-l, label: "3,14 x 2 x jari-jari "}
+
+    Start --> Input
+    Input --> OutputArea --> End
+    Input --> OutputCircum --> End
+```
