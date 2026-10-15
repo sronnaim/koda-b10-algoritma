@@ -90,16 +90,22 @@ flowchart TD
 ### Pseudo
 
 ```pseudo
-DECLARE jariJari : REAL
+DECLARE jariJari : INTEGER
 DECLARE luasLingkaran : REAL
 DECLARE kelilingLingkaran : REAL
-CONSTANT pi = 3.14
+DECLARE pi : REAL
 
 INPUT jariJari
+
+IF jariJari MOD 7 = 0 THEN
+    pi <- 22/7
+ELSE
+    pi <- 3.14
+ENDIF
 
 luasLingkaran <- pi * jariJari * jariJari
 OUTPUT luasLingkaran
 
-kelilingLingkaran <- pi * 2 * jariJari
+kelilingLingkaran <- 2 * pi * jariJari
 OUTPUT kelilingLingkaran
 ```
