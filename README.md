@@ -56,11 +56,13 @@ ENDIF
 
 1. Mulai
 2. Masukkan sebuah angka sebagai jari-jari
-3. **Untuk luas lingkaran**, lakukan perkalian *pi* (3,14) dengan **jari-jari** kuadrat
-4. Tampilkan hasil perkalian sebagai **luas lingkaran**
-5. **Untuk keliling lingkaran**, lakukan perkalian *pi* (3,14) dengan bilangan **2** dan **jari-jari**
-6. Tampilkan hasil perkalian terakhir sebagai **keliling lingkaran**
-7. Selesai
+3. Jika modulus dari **jari-jari** dan 7 adalah 0, gunakan 22/7 sebagai *pi*
+4. Jika tidak, maka gunakan 3,14 sebagai *pi*
+5. **Untuk luas lingkaran**, lakukan perkalian *pi* dengan **jari-jari** kuadrat
+6. Tampilkan hasil perkalian sebagai **luas lingkaran**
+7. **Untuk keliling lingkaran**, lakukan perkalian *pi* dengan bilangan **2** dan **jari-jari**
+8. Tampilkan hasil perkalian terakhir sebagai **keliling lingkaran**
+9. Selesai
 
 ### Flowchart
 
@@ -68,13 +70,21 @@ ENDIF
 flowchart TD
     Start@{ shape: start, label: "mulai" }
     Input@{ shape: lean-r, label: "jari-jari"}
-    A@{ shape: rect, label: "luas lingkaran = 3,14 x jari-jari<sup>2</sup>" }
-    B@{ shape: rect, label: "keliling lingkaran = 3,14 x 2 x jari-jari" }
+    RControl@{ shape: decision, label: "jari-jari % 7 = 0?" }
+    SetPiFr@{ shape: rect, label: "pi = 22/7" }
+    SetPiDec@{ shape: rect, label: "pi = 3,14" }
+    CalcArea@{ shape: rect, label: "luas lingkaran = pi x jari-jari x jar-jari" }
+    CalcCircum@{ shape: rect, label: "keliling lingkaran = 2 x pi x jari-jari" }
     OutputArea@{ shape: lean-r, label: "luas lingkaran"}
     OutputCircum@{ shape: lean-r, label: "keliling lingkaran" }
     End@{ shape: stop, label: "selesai"}
 
-    Start --> Input --> A --> OutputArea --> B --> OutputCircum --> End
+    Start --> Input --> RControl 
+
+    RControl --ya--> SetPiFr --> CalcArea
+    RControl --tidak--> SetPiDec --> CalcArea
+
+    CalcArea --> OutputArea --> CalcCircum --> OutputCircum --> End
 ```
 
 ### Pseudo
